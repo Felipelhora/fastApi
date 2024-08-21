@@ -5,7 +5,7 @@ from fastapi import FastAPI
 
 from fastapi.responses import HTMLResponse
 
-from fast.schemas import Message
+from fast.schemas import Message, UserSchema, UserPublic
 
 
 app = FastAPI()
@@ -32,3 +32,7 @@ def read_root():
                 </html>
             '''
 
+# modelo de saida
+@app.post('/users', status_code=HTTPStatus.CREATED, response_model=UserPublic)
+def create_user(user:UserSchema):
+    return user
