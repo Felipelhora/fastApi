@@ -13,5 +13,13 @@ class UserSchema(BaseModel):
 
 # Modelo de contrato de saída
 class UserPublic(BaseModel):
+    id:int
     username:str
     email:EmailStr
+
+
+class UserDB(UserSchema):
+    id:int
+
+class UserList(BaseModel):
+    user:list[UserPublic]
