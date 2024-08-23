@@ -4,7 +4,7 @@
 dict_1 = { "nome": "felipe"
 
 }
-dict_2 = {"idade": "37", 
+dict_2 = {"idade": "37",
           **dict_1
           }
 
@@ -22,7 +22,7 @@ try:
     raise ('É possivel forçar um erro mesmo com sucesso usando raise, assim essa mensagem é enviada e direcionada para exception')
 except:
     raise ('aqui eu coloco o erro que eu quero colocar com minha mensagem personalizada')
-    
+
 
 
 
