@@ -1,6 +1,6 @@
 
 
-
+'''
 dict_1 = { "nome": "felipe"
 
 }
@@ -22,7 +22,28 @@ try:
     raise ('É possivel forçar um erro mesmo com sucesso usando raise, assim essa mensagem é enviada e direcionada para exception')
 except:
     raise ('aqui eu coloco o erro que eu quero colocar com minha mensagem personalizada')
+'''
+
+### yeld
+
+# objeto gerador
+# tem yield se chama um gerador e não uma função
+## pode se iterar
+
+# next() função para gerar o proximo | caso não tenha mais gera exception | só vai para frente
 
 
+def funcao_geradora():
+    yield 1
+    yield 2
+    yield 3
+
+
+gerador  = funcao_geradora()
+
+next(gerador)
+next(gerador)
+next(gerador)
+next(gerador)
 
 
